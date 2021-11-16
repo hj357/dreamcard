@@ -2,18 +2,30 @@ const express = require("express");
 const postRouter = require("./router/post");
 const reviewRouter = require("./router/review");
 const userRouter = require("./router/user");
+const PORT = 4000;
+const syncDatabase = require("./entities/index");
 
-const app = express();
-const port = 4000;
+const initServer = async () => {
+  const app = express();
 
-app.use("/user", userRouter);
-app.use("/review", reviewRouter);
-app.use("/post", postRouter);
+  try {
+    await syncDatabase();
+  } catch (e) {
+    console.log("database error");
+    console.log(e.message);
+  }
 
-app.get("/", (req, res, next) => {
-  res.send("Hello World!");
-});
+  app.use("/user", userRouter);
+  app.use("/review", reviewRouter);
+  app.use("/post", postRouter);
 
-app.listen(port, () => {
-  console.log("listening in 4000!");
-});
+  app.get("/", (req, res, next) => {
+    res.send("hellow world");
+  });
+
+  app.listen(PORT, () => {
+    console.log("listening in 4000!");
+  });
+};
+
+initServer();
