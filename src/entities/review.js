@@ -14,11 +14,6 @@ const ReviewEntity = sequelize.define(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    CreateTime: {
-      type: "TIMESTAMP",
-      defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
-      allowNull: false,
-    },
     StarScore: {
       type: DataTypes.NUMBER,
       allowNull: false,

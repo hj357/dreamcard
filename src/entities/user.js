@@ -18,11 +18,6 @@ const UserEntity = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    CreateTime: {
-      type: "TIMESTAMP",
-      defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
-      allowNull: false,
-    },
     CardNum: {
       type: DataTypes.STRING,
       allowNull: true,

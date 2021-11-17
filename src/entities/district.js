@@ -2,11 +2,10 @@ const { Sequelize, DataTypes } = require("sequelize");
 const sequelize = require("../loader/connect-database");
 
 const DistrictEntity = sequelize.define(
-  "distict",
+  "district",
   {
     Id: {
       type: DataTypes.NUMBER,
-      autoIncrement: true,
       allowNull: false,
       primaryKey: true,
     },

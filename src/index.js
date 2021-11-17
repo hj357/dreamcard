@@ -2,6 +2,8 @@ const express = require("express");
 const postRouter = require("./router/post");
 const reviewRouter = require("./router/review");
 const userRouter = require("./router/user");
+const restaurantRouter = require("./router/restaurant");
+const districtRouter = require("./router/district");
 const PORT = 4000;
 const syncDatabase = require("./entities/index");
 
@@ -18,6 +20,8 @@ const initServer = async () => {
   app.use("/user", userRouter);
   app.use("/review", reviewRouter);
   app.use("/post", postRouter);
+  app.use("/restaurant", restaurantRouter);
+  app.use("/district", districtRouter);
 
   app.get("/", (req, res, next) => {
     res.send("hellow world");

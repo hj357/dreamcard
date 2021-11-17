@@ -18,11 +18,7 @@ const PostEntity = sequelize.define(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    CreateTime: {
-      type: "TIMESTAMP",
-      defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
-      allowNull: false,
-    },
+
     PostType: {
       type: DataTypes.STRING,
       allowNull: true,
