@@ -40,5 +40,6 @@ const syncDatabase = () => {
   });
 
   sequelize.sync();
+  console.log("database sync");
 };
 module.exports = syncDatabase;

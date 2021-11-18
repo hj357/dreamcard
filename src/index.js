@@ -1,11 +1,11 @@
 const express = require("express");
+const syncDatabase = require("./entities/index");
+const districtRouter = require("./router/district");
 const postRouter = require("./router/post");
 const reviewRouter = require("./router/review");
 const userRouter = require("./router/user");
 const restaurantRouter = require("./router/restaurant");
-const districtRouter = require("./router/district");
 const PORT = 4000;
-const syncDatabase = require("./entities/index");
 
 const initServer = async () => {
   const app = express();
