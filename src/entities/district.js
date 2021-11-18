@@ -5,7 +5,8 @@ const DistrictEntity = sequelize.define(
   "district",
   {
     Id: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
       allowNull: false,
       primaryKey: true,
     },

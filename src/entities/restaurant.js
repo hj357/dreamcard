@@ -5,7 +5,7 @@ const RestaurantEntity = sequelize.define(
   "restaurant",
   {
     Id: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       allowNull: false,
       primaryKey: true,
@@ -23,7 +23,7 @@ const RestaurantEntity = sequelize.define(
       allowNull: false,
     },
     TelephoneNum: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       allowNull: true,
     },
   },

@@ -5,7 +5,7 @@ const ReviewEntity = sequelize.define(
   "review",
   {
     Id: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       allowNull: false,
       primaryKey: true,
@@ -15,7 +15,7 @@ const ReviewEntity = sequelize.define(
       allowNull: false,
     },
     StarScore: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
   },

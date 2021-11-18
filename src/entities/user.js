@@ -5,7 +5,7 @@ const UserEntity = sequelize.define(
   "user",
   {
     Id: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       allowNull: false,
       primaryKey: true,
