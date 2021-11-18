@@ -5,10 +5,17 @@ const postRouter = require("./router/post");
 const reviewRouter = require("./router/review");
 const userRouter = require("./router/user");
 const restaurantRouter = require("./router/restaurant");
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
+
 const PORT = 4000;
 
 const initServer = async () => {
   const app = express();
+  app.use(cors());
+  app.use(bodyParser.json());
+  app.use(cookieParser());
 
   try {
     await syncDatabase();
