@@ -59,7 +59,7 @@
             data-toggle="dropdown"
             aria-expanded="false"
           >
-            성북구<span class="caret"></span>
+            종로구<span class="caret"></span>
           </button>
           <ul class="dropdown-content">
             <il>
@@ -95,7 +95,7 @@
                   <a href="#">10. 도봉구</a>
                 </li>
                 <li class="control" data-filter=".nw">
-                  <a href="#">11. 노원구</a>
+                  <a href=#">11. 노원구</a>
                 </li>
                 <li class="control" data-filter=".ep">
                   <a href="#">12. 은평구</a>
@@ -204,6 +204,19 @@
             margin-top: 10px;
           }
         </style>
+        <script>
+          const restaurantInfoBox = document.querySelector("#restaurantInfo");
+          const getRestaurantInfo = async (restaurantInfo) => {
+            const response = await fetch("http://localhost:4000/restaurant/1");
+            const restaurantData = await response.json();
+            console.log("되고있냐...")
+            console.log(restaurantData);
+            restaurantInfoBox.innerHTML = restaurantData.Id;
+          };
+
+          getRestaurantInfo(1);
+        </script>
+
       </div>
     </div>
   </body>
